@@ -54,31 +54,32 @@
                 <div class="bg-dark position-absolute top-0 start-0 w-100 h-100 rounded-3 d-none d-dark-mode-block"></div>
                 <div class="card-body position-relative zindex-2">
                   <h5 class="card-title pb-3 mb-4">ENQUIRE NOW</h5>
-                  <form class="row g-4 needs-validation" netlify  name="contact" method="POST" data-netlify="true" action="https://front-desk.propertybase.com/forms/cec8b56b8a7fc30ad5cecd5a64ec49411cce92a8">
+                  <form class="row g-4 needs-validation" netlify novalidate=""  name="contact" method="POST" data-netlify="true" action="https://front-desk.propertybase.com/forms/cec8b56b8a7fc30ad5cecd5a64ec49411cce92a8">
                     <!-- HIDDEN -->
-                    <input type="hidden" name="Project__c" value="a0a5j00000CjQz2AAF">
-                    <input type="hidden" name="pba__PropertyType__c" value="Apartment">
-                    <input type="hidden" name="pbasr__Rotation_Name__c" value="Peerless">
-                    <input type="hidden" name="pba__ListingType__c" value="Sale">
+                    <input type="hidden" name="request[Project__c]"               value="a0a5j00000CjQz2AAF">
+                    <input type="hidden" name="request[pba__PropertyType__c]"    value="Apartment">
+                    <input type="hidden" name="request [pba__ListingType__c]"     value="Sale">
+                    <input type="hidden" name="request [pbasr__Rotation_Name__c]" value="Peerless">
+
                     <!-- INPUTS -->
                     <div class="col-12">
                       <label for="contact[FirstName]" class="form-label fs-base">First name</label>
-                      <input type="text" class="form-control form-control-lg" name="contact[FirstName]" id="contact[FirstName]">
+                      <input type="text" class="form-control form-control-lg" name="contact[FirstName]" id="contact[FirstName]" required="">
                       <div class="invalid-feedback">Please enter your full name!</div>
                     </div>
                     <div class="col-12">
                       <label for="contact[LastName]" class="form-label fs-base">Last name</label>
-                      <input type="text" class="form-control form-control-lg" name="contact[LastName]" id="contact[LastName]">
+                      <input type="text" class="form-control form-control-lg" name="contact[LastName]" id="contact[LastName]" required="">
                       <div class="invalid-feedback">Please enter your last name!</div>
                     </div>
                     <div class="col-12">
                       <label for="contact[MobilePhone]" class="form-label fs-base">Mobile Phone</label>
-                      <input type="text" class="form-control form-control-lg" name="contact[MobilePhone]" id="contact[MobilePhone]">
+                      <input type="text" class="form-control form-control-lg" name="contact[MobilePhone]" id="contact[MobilePhone]" required="">
                       <div class="invalid-feedback">Please provide a valid mobile phone number!</div>
                     </div>
                     <div class="col-12">
                       <label for="contact[Email]" class="form-label fs-base">Email address</label>
-                      <input type="email" class="form-control form-control-lg" name="contact[Email]" id="contact[Email]">
+                      <input type="email" class="form-control form-control-lg" name="contact[Email]" id="contact[Email]" required="">
                       <div class="invalid-feedback">Please provide a valid email address!</div>
                     </div>
                     <div>
