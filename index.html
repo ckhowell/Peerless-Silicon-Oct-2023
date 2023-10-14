@@ -97,10 +97,24 @@
                   </form>
                   <script>
                     function handleFormSubmit() {
-                      // Your form submission logic can go here if needed
+                      // Get the form input values
+                      const firstName = document.getElementById("contact[FirstName]").value;
+                      const lastName = document.getElementById("contact[LastName]").value;
+                      const mobilePhone = document.getElementById("contact[MobilePhone]").value;
+                      const email = document.getElementById("contact[Email]").value;
+                  
+                      // Perform form validation
+                      if (firstName.trim() === '' || lastName.trim() === '' || mobilePhone.trim() === '' || email.trim() === '') {
+                        alert("Please fill out all required fields.");
+                        return false; // Prevent form submission
+                      }
+                  
+                      // You can add additional validation here, like validating the email format.
+                  
+                      // If the validation passes, you can proceed with other logic, or you can remove this entire if block if not needed.
                   
                       // Redirect to the desired URL
-                      window.location.href = "https://www.peerlessresidences.com.au/thankyou/"; 
+                      window.location.href = "https://www.peerlessresidences.com.au/thankyou/"; // Replace with your desired URL
                       return false; // Prevent the form from submitting as the redirection is handled by JavaScript
                     }
                   </script>
