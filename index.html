@@ -54,7 +54,7 @@
                 <div class="bg-dark position-absolute top-0 start-0 w-100 h-100 rounded-3 d-none d-dark-mode-block"></div>
                 <div class="card-body position-relative zindex-2">
                   <h5 class="card-title pb-3 mb-4">ENQUIRE NOW</h5>
-                  <form class="row g-4 needs-validation" netlify novalidate=""  name="contact" method="POST" data-netlify="true" action="https://front-desk.propertybase.com/forms/cec8b56b8a7fc30ad5cecd5a64ec49411cce92a8" onsubmit="return handleFormSubmit();">
+                  <form class="row g-4 needs-validation" netlify novalidate name="contact" method="POST" data-netlify="true" action="https://front-desk.propertybase.com/forms/cec8b56b8a7fc30ad5cecd5a64ec49411cce92a8" onsubmit="return handleFormSubmit();">
                     <!-- HIDDEN -->
                     <input type="hidden" name="request[Project__c]"               value="a0a5j00000CjQz2AAF">
                     <input type="hidden" name="request[pba__PropertyType__c]"    value="Apartment">
@@ -64,22 +64,22 @@
                     <!-- INPUTS -->
                     <div class="col-12">
                       <label for="contact[FirstName]" class="form-label fs-base">First name</label>
-                      <input type="text" class="form-control form-control-lg" name="contact[FirstName]" id="contact[FirstName]" required="">
+                      <input type="text" class="form-control form-control-lg" name="contact[FirstName]" id="contact[FirstName]" required>
                       <div class="invalid-feedback">Please enter your full name!</div>
                     </div>
                     <div class="col-12">
                       <label for="contact[LastName]" class="form-label fs-base">Last name</label>
-                      <input type="text" class="form-control form-control-lg" name="contact[LastName]" id="contact[LastName]" required="">
+                      <input type="text" class="form-control form-control-lg" name="contact[LastName]" id="contact[LastName]" required>
                       <div class="invalid-feedback">Please enter your last name!</div>
                     </div>
                     <div class="col-12">
                       <label for="contact[MobilePhone]" class="form-label fs-base">Mobile Phone</label>
-                      <input type="text" class="form-control form-control-lg" name="contact[MobilePhone]" id="contact[MobilePhone]" required="">
+                      <input type="text" class="form-control form-control-lg" name="contact[MobilePhone]" id="contact[MobilePhone]" required>
                       <div class="invalid-feedback">Please provide a valid mobile phone number!</div>
                     </div>
                     <div class="col-12">
                       <label for="contact[Email]" class="form-label fs-base">Email address</label>
-                      <input type="email" class="form-control form-control-lg" name="contact[Email]" id="contact[Email]" required="">
+                      <input type="email" class="form-control form-control-lg" name="contact[Email]" id="contact[Email]" required>
                       <div class="invalid-feedback">Please provide a valid email address!</div>
                     </div>
                     <div>
@@ -104,20 +104,48 @@
                       const email = document.getElementById("contact[Email]").value;
                   
                       // Perform form validation
-                      if (firstName.trim() === '' || lastName.trim() === '' || mobilePhone.trim() === '' || email.trim() === '') {
-                        alert("Please fill out all required fields.");
+                      if (firstName.trim() === '') {
+                        setInvalidFeedback("Please enter your first name.", "contact[FirstName]");
                         return false; // Prevent form submission
                       }
                   
-                      // You can add additional validation here, like validating the email format.
+                      if (lastName.trim() === '') {
+                        setInvalidFeedback("Please enter your last name.", "contact[LastName]");
+                        return false; // Prevent form submission
+                      }
+                  
+                      if (mobilePhone.trim() === '') {
+                        setInvalidFeedback("Please provide a valid mobile phone number.", "contact[MobilePhone]");
+                        return false; // Prevent form submission
+                      }
+                  
+                      if (email.trim() === '' || !isValidEmail(email)) {
+                        setInvalidFeedback("Please provide a valid email address.", "contact[Email]");
+                        return false; // Prevent form submission
+                      }
                   
                       // If the validation passes, you can proceed with other logic, or you can remove this entire if block if not needed.
                   
                       // Redirect to the desired URL
-                      window.location.href = "https://www.peerlessresidences.com.au/thankyou/"; // Replace with your desired URL
+                      window.location.href = "https://www.peerlessresidences.com.au/thankyou"; // Replace with your desired URL
                       return false; // Prevent the form from submitting as the redirection is handled by JavaScript
                     }
+                  
+                    // Function to set the invalid feedback message for a field
+                    function setInvalidFeedback(message, fieldId) {
+                      const invalidFeedback = document.getElementById(fieldId).closest(".col-12").querySelector(".invalid-feedback");
+                      invalidFeedback.textContent = message;
+                    }
+                  
+                    // Function to validate email format
+                    function isValidEmail(email) {
+                      // You can implement your own email validation logic here
+                      // This is a simple example, you can use a more comprehensive validation method
+                      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                      return emailPattern.test(email);
+                    }
                   </script>
+
                 </div>
               </div>
             </div>
