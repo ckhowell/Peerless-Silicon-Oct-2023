@@ -39,9 +39,6 @@
   </head>
   <!-- Body -->
   <body style="background-color:#f6ebe5">
-    <!-- Page wrapper for sticky footer -->
-    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
-
       <!-- Page content -->
       <section class="d-flex my-auto align-items-center align-middle h-100 pb-4">
         <div class="container my-auto align-middle">
@@ -54,7 +51,8 @@
                 <div class="bg-dark position-absolute top-0 start-0 w-100 h-100 rounded-3 d-none d-dark-mode-block"></div>
                 <div class="card-body position-relative zindex-2">
                   <h5 class="card-title pb-3 mb-4">ENQUIRE NOW</h5>
-                  <form class="row g-4 needs-validation" netlify novalidate name="contact" method="POST" data-netlify="true" action="https://front-desk.propertybase.com/forms/cec8b56b8a7fc30ad5cecd5a64ec49411cce92a8" onsubmit="return handleFormSubmit();">
+
+                  <form class="row g-4 needs-validation" netlify novalidate name="contact" method="post" data-netlify="true" action="https://front-desk.propertybase.com/forms/cec8b56b8a7fc30ad5cecd5a64ec49411cce92a8" onsubmit="return handleFormSubmit();">
                     <!-- HIDDEN -->
                     <input type="hidden" name="request[Project__c]"               value="a0a5j00000CjQz2AAF">
                     <input type="hidden" name="request[pba__PropertyType__c]"    value="Apartment">
@@ -93,8 +91,9 @@
                       <button type="submit" name="submit" class="btn btn-lg btn-primary w-100 w-sm-auto">Submit</button>
                     </div>
                     <!-- Leave this field here -->
-                    <input type="text" name="h_cec8b56b8a7fc30ad5cecd5a64ec49411cce92a8"  style="display: none">
+                    <input type="text" name="h_cec8b56b8a7fc30ad5cecd5a64ec49411cce92a8" value="" style="display: none" />
                   </form>
+                  
                   <script>
                     function handleFormSubmit() {
                       // Get the form input values
