@@ -37,7 +37,6 @@
     <!-- Main Theme Styles + Bootstrap -->
     <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
   </head>
-  <!-- Body -->
   <body style="background-color:#f6ebe5">
       <!-- Page content -->
       <section class="d-flex my-auto align-items-center align-middle h-100 pb-4">
@@ -51,100 +50,53 @@
                 <div class="bg-dark position-absolute top-0 start-0 w-100 h-100 rounded-3 d-none d-dark-mode-block"></div>
                 <div class="card-body position-relative zindex-2">
                   <h5 class="card-title pb-3 mb-4">ENQUIRE NOW</h5>
+                    <form class="row g-4" action="https://front-desk.propertybase.com/forms/cec8b56b8a7fc30ad5cecd5a64ec49411cce92a8" method="post">
 
-                  <form class="row g-4 needs-validation" netlify novalidate name="contact" method="post" data-netlify="true" action="https://front-desk.propertybase.com/forms/cec8b56b8a7fc30ad5cecd5a64ec49411cce92a8" onsubmit="return handleFormSubmit();">
-                    <!-- HIDDEN -->
-                    <input type="hidden" name="request[Project__c]"               value="a0a5j00000CjQz2AAF">
-                    <input type="hidden" name="request[pba__PropertyType__c]"    value="Apartment">
-                    <input type="hidden" name="request[pba__ListingType__c]"     value="Sale">
-                    <input type="hidden" name="request[pbasr__Rotation_Name__c]" value="Peerless">
 
-                    <!-- INPUTS -->
-                    <div class="col-12">
-                      <label for="contact[FirstName]" class="form-label fs-base">First name</label>
-                      <input type="text" class="form-control form-control-lg" name="contact[FirstName]" id="contact[FirstName]" required>
-                      <div class="invalid-feedback">Please enter your full name!</div>
-                    </div>
-                    <div class="col-12">
-                      <label for="contact[LastName]" class="form-label fs-base">Last name</label>
-                      <input type="text" class="form-control form-control-lg" name="contact[LastName]" id="contact[LastName]" required>
-                      <div class="invalid-feedback">Please enter your last name!</div>
-                    </div>
-                    <div class="col-12">
-                      <label for="contact[MobilePhone]" class="form-label fs-base">Mobile Phone</label>
-                      <input type="text" class="form-control form-control-lg" name="contact[MobilePhone]" id="contact[MobilePhone]" required>
-                      <div class="invalid-feedback">Please provide a valid mobile phone number!</div>
-                    </div>
-                    <div class="col-12">
-                      <label for="contact[Email]" class="form-label fs-base">Email address</label>
-                      <input type="email" class="form-control form-control-lg" name="contact[Email]" id="contact[Email]" required>
-                      <div class="invalid-feedback">Please provide a valid email address!</div>
-                    </div>
-                    <div>
-                      <div class="form-check">
-                        <input type="checkbox"  name="contact[Opt_in__c]" class="form-check-input" value="true">
-                        <label for="terms" class="form-check-label fs-base">I agree to receive further information</label>
-                        <p class="verysmall">You can unsubscribe anytime.</p>
+                      <!-- Sample of populating contact fields -->
+                      <div class="col-12">
+                        <label for="contact[FirstName]" class="form-label fs-base">First name</label>                       
+                        <input type="text" class="form-control form-control-lg" name="contact[FirstName]" required="true" />
                       </div>
-                    </div>
-                    <div class="col-12">
-                      <button type="submit" name="submit" class="btn btn-lg btn-primary w-100 w-sm-auto">Submit</button>
-                    </div>
-                    <!-- Leave this field here -->
-                    <input type="text" name="h_cec8b56b8a7fc30ad5cecd5a64ec49411cce92a8" value="" style="display: none" />
-                  </form>
-                  
-                  <script>
-                    function handleFormSubmit() {
-                      // Get the form input values
-                      const firstName = document.getElementById("contact[FirstName]").value;
-                      const lastName = document.getElementById("contact[LastName]").value;
-                      const mobilePhone = document.getElementById("contact[MobilePhone]").value;
-                      const email = document.getElementById("contact[Email]").value;
-                  
-                      // Perform form validation
-                      if (firstName.trim() === '') {
-                        setInvalidFeedback("Please enter your first name.", "contact[FirstName]");
-                        return false; // Prevent form submission
-                      }
-                  
-                      if (lastName.trim() === '') {
-                        setInvalidFeedback("Please enter your last name.", "contact[LastName]");
-                        return false; // Prevent form submission
-                      }
-                  
-                      if (mobilePhone.trim() === '') {
-                        setInvalidFeedback("Please provide a valid mobile phone number.", "contact[MobilePhone]");
-                        return false; // Prevent form submission
-                      }
-                  
-                      if (email.trim() === '' || !isValidEmail(email)) {
-                        setInvalidFeedback("Please provide a valid email address.", "contact[Email]");
-                        return false; // Prevent form submission
-                      }
-                  
-                      // If the validation passes, you can proceed with other logic, or you can remove this entire if block if not needed.
-                  
-                      // Redirect to the desired URL
-                      window.location.href = "https://www.peerlessresidences.com.au/thankyou"; // Replace with your desired URL
-                      return false; // Prevent the form from submitting as the redirection is handled by JavaScript
-                    }
-                  
-                    // Function to set the invalid feedback message for a field
-                    function setInvalidFeedback(message, fieldId) {
-                      const invalidFeedback = document.getElementById(fieldId).closest(".col-12").querySelector(".invalid-feedback");
-                      invalidFeedback.textContent = message;
-                    }
-                  
-                    // Function to validate email format
-                    function isValidEmail(email) {
-                      // You can implement your own email validation logic here
-                      // This is a simple example, you can use a more comprehensive validation method
-                      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-                      return emailPattern.test(email);
-                    }
-                  </script>
 
+                        <div class="col-12">
+                          <label for="contact[LastName]" class="form-label fs-base">Last name</label>                        
+                          <input type="text" class="form-control form-control-lg" name="contact[LastName]" required="true" />
+                      </div>
+
+                        <div class="col-12">
+                          <label for="contact[Email]" class="form-label fs-base">Email address</label>                  
+                          <input type="text" class="form-control form-control-lg" name="contact[Email]" required="true" />
+                      </div>
+
+                        <div class="col-12">     
+                          <label for="contact[MobilePhone]" class="form-label fs-base">Mobile Phone</label>                        <input type="text" class="form-control form-control-lg" name="contact[MobilePhone]" required="true" />
+                      </div>
+
+
+                      <!-- The next 3 lines are samples of hidden values that you can put in the back of the form to populate Contact or Request information in Propertybase. -->
+
+                      <input type="hidden" name="contact[LeadSource]" value="Project Website" />
+                      <input type="hidden" name="request[pba__Enquiry_Source_pb__c]" value="Project Website" />
+                      <input type="hidden" name="request[Project__c]"               value="a0a5j00000CjQz2AAF">
+                      <input type="hidden" name="request[pba__PropertyType__c]"    value="Apartment">
+                      <input type="hidden" name="request[pba__ListingType__c]"     value="Sale">
+                      <input type="hidden" name="request[pbasr__Rotation_Name__c]" value="Peerless">
+                      <input type="hidden" name="success_url" value="https://www.peerlessresidences.com.au/thankyou" style="display: none" />
+                      <!-- <div>
+                        <div class="form-check">
+                          <input type="checkbox" name="contact[Opt_in__c]" class="form-check-input" value="true">
+                          <label for="terms" class="form-check-label fs-base">I agree to receive further information</label>
+                          <p class="verysmall">You can unsubscribe anytime.</p>
+                        </div>
+                      </div> -->
+                      <div class="col-12">
+                        <button type="submit" class="btn btn-lg btn-primary w-100 w-sm-auto">Submit</button>
+                      </div>
+
+                      <!-- Leave this field here -->
+                      <input type="text" name="h_cec8b56b8a7fc30ad5cecd5a64ec49411cce92a8" value="" style="display: none" />
+                    </form>
                 </div>
               </div>
             </div>
@@ -158,5 +110,6 @@
 
     <!-- Main Theme Script -->
     <script src="assets/js/theme.min.js"></script>
-  </body>
+</body>
+
 </html>
