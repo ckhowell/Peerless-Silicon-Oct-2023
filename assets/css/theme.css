@@ -108,7 +108,7 @@
   --si-gray-400: #d4d7e5;
   --si-gray-500: #b4b7c9;
   --si-gray-600: #9397ad;
-  --si-gray-700: #565973;
+  --si-gray-700: #736956;
   --si-gray-800: #33354d;
   --si-gray-900: #0b0f19;
   --si-primary: #ec1a64;
@@ -174,7 +174,7 @@
   --si-tertiary-color-rgb: 86, 89, 115;
   --si-tertiary-bg: #f3f6ff;
   --si-tertiary-bg-rgb: 243, 246, 255;
-  --si-heading-color: var(--si-gray-900);
+  --si-heading-color: #565973;
   --si-link-color: #ec1a64;
   --si-link-color-rgb: 236, 26, 100;
   --si-link-decoration: underline;

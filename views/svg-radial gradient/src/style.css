@@ -1,0 +1,35 @@
+html {
+  box-sizing: border-box;
+  --duration: 0.3s;
+}
+body {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background-color: #0900D4;
+}
+.hide {
+  visibility: hidden;
+}
+.menu {
+  border: 4px solid green;
+}
+.menu__item {
+  fill: #fff;
+  opacity: 0.2;
+  transition: fill var(--duration) ease-out;
+  transition: opacity var(--duration) ease-out;
+  z-index: 100;
+}
+.active {
+  fill: #fff;
+  opacity: 1;
+}
+.menu__item:hover {
+  opacity: 1;
+}
+#donut{opacity:0.1;}
+.st7{fill:#FFFFFF;}
+
