@@ -24,7 +24,8 @@
   display: block;
   overflow: hidden;
   text-decoration: none !important; // stylelint-disable-line declaration-no-important
-  -webkit-mask-image: -webkit-radial-gradient($white, $black); // stylelint-disable-line property-no-vendor-prefix, value-no-vendor-prefix
+  // -webkit-mask-image: -webkit-radial-gradient($white, $black); 
+  // stylelint-disable-line property-no-vendor-prefix, value-no-vendor-prefix
 
   > img {
     display: block;

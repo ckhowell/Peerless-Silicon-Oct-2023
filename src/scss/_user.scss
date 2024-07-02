@@ -30,8 +30,60 @@
 }
 
 body {
-  color: #565973 !important;
+  color: #645951 !important;
+}
+.thin {
+  font-weight: 100 !important;
+}
+.gallery-item {
+  filter: grayscale(1);
+  border: 15px white solid;
+  -webkit-box-shadow: 10px 10px 24px -1px rgba(0,0,0,0.27);
+-moz-box-shadow: 10px 10px 24px -1px rgba(0,0,0,0.27);
+box-shadow: 10px 10px 24px -1px rgba(0,0,0,0.27);
+transition: 2s ease;
 }
 
+.gallery-item:hover {
+  filter: grayscale(1);
+  -webkit-transform: rotateZ(2deg);
+  -ms-transform: rotateZ(2deg);
+  transform: rotateZ(2deg);
+  transition: 0.3s ease;
+}
 
+.gallery-item::before {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: var(--si-gallery-overlay-bg);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.card-title {
+  color: #645951 !important;
+  font-size: 1em;
+  letter-spacing: 2px;
+}
+.form-label {
+  color: #645951 !important;
+}
+.form-check-label {
+  color: #645951 !important;
+}
+.verysmall {
+  color: #645951 !important;
+}
+.form-check-input {
+  color: #645951 !important;
+}
+.form-check-input {
+  border: 2px solid #645951;
+}
+.form-check-input:checked {
+  color: #645951 !important;
+}
 
