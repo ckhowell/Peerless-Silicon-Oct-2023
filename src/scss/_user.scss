@@ -46,9 +46,9 @@ transition: 2s ease;
 
 .gallery-item:hover {
   filter: grayscale(1);
-  -webkit-transform: rotateZ(2deg);
-  -ms-transform: rotateZ(2deg);
-  transform: rotateZ(2deg);
+  -webkit-transform: rotateZ(1deg);
+  -ms-transform: rotateZ(1deg);
+  transform: rotateZ(1deg);
   transition: 0.3s ease;
 }
 
