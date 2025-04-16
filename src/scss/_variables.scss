@@ -30,7 +30,7 @@ $gray-900:                    #0b0f19 !default;
 $black:                       #000 !default;
 
 // Theme colors
-$primary:                     #962f47 !default;
+$primary:                     #1e1e1e !default;
 $secondary:                   #eee5dd !default;
 $info:		                    #4c82f7 !default;
 $success:                     #22c55e !default;
@@ -209,9 +209,16 @@ $text-shadow:                               0 .0625rem $gray-900 !default;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$path-to-fonts:                             "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" !default;
+@font-face {
+  font-family: 'Roc';
+  font-style: normal;
+  font-weight: 200;
+  src: url(http://43.250.142.136/abedian.co/assets/fonts/Roc-ExtraLight.woff2) format('woff2');
+}
 
-$font-family-sans-serif:                    "Manrope", sans-serif !default;
+$path-to-fonts:                             "http://43.250.142.136/abedian.co/assets/fonts/Roc-ExtraLight.woff2?family=Roc&display=swap" !default;
+
+$font-family-sans-serif:                    "Roc", sans-serif !default;
 
 $font-size-base:                            1rem !default;
 $font-size-xl:                              $font-size-base * 1.25 !default;
